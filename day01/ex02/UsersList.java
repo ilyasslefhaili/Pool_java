@@ -4,7 +4,7 @@ public class UsersList{
     public void AddUser(User toAdd){
         Array.add(toAdd);
     }
-    public User RetrieveUserById(int id){
+    public User RetrieveUserById(int id) throws Exception{
         return(Array.RetrivebyId(id));
     }
     public User RetrieveUserByIndex(int index){

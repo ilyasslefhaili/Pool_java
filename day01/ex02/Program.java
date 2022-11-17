@@ -7,7 +7,11 @@ public class Program{
         User p = new User("kk", 0);
         a.AddUser(p);
         a.AddUser(k);
-        System.out.println(a.RetrieveUserById(0).getName());
+        try{
+         System.out.println(a.RetrieveUserById(4).getName());
+        }catch(Exception e){
+                System.out.println(e.getMessage());
+        }
         System.out.println(a.RetrieveUserByIndex(1).getName());
         System.out.println(a.RetrieveNumOfUsers());
     }

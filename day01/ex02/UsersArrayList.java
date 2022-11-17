@@ -26,14 +26,14 @@ public class UsersArrayList{
             return (this.UsersArray[index]);
         throw (new OutOfMemoryError("out of range"));
     }
-    public User RetrivebyId(int id)
+    public User RetrivebyId(int id) throws Exception
     {
         for (int i = 0;i < this.UsersArray.length;i++)
         {
             if (this.UsersArray[i].getId() == id)
                 return (this.UsersArray[i]);
         }
-        throw (new RuntimeException("not found"));
+        throw (new UserNotFoundException("User Not found"));
     }
     public int RetriveNumofUsers()
     {

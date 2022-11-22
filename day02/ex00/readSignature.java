@@ -11,7 +11,6 @@ class readSignature{
     {
         Vector<String> fileInVec = new Vector<String>();
         Scanner sc = new Scanner(file);
-    
         while (sc.hasNextLine())
             fileInVec.add(readLine(sc));
         return fileInVec;

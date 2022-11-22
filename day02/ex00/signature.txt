@@ -1,3 +1,3 @@
-CLASS , ffffffca fffffffe ffffffba ffffffbe
-PNG , ffffff89 50 4e 47
+CLASS , ca fe ba be
+PNG , 89 50 4e 47
 GIF , 47 49 46 38

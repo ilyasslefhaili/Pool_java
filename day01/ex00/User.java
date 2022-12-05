@@ -1,6 +1,4 @@
 
-package day01.ex00;
-
 public class User{
     static int incerement_id = 0;
     private Integer id;
@@ -15,4 +13,6 @@ public class User{
     }
     public Integer getBalance(){return this.Balance;};
     public void setBalance(Integer Balance){this.Balance = Balance;}
+    public String getName(){return this.name;}
+    public Integer getId(){return this.id;}
 }

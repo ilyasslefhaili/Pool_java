@@ -9,10 +9,7 @@ public class Program {
         try {
             User foundUser = a.RetrieveUserById(4);
             System.out.println(foundUser.getName());
-        } catch (UserNotFoundException e) {
-            if (e.getMessage() == null)
-                System.out.println("SHIIIT");
-            else
+        } catch (UserNotFoundException e) { 
                 System.out.println(e.getMessage());
         }
 

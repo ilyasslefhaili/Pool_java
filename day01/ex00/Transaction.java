@@ -1,5 +1,4 @@
 
-package day01.ex00;
 import java.util.UUID;
 
  public class Transaction{
@@ -18,4 +17,6 @@ import java.util.UUID;
         this.TrasferCategory = TsCa;
         this.Amount = Amount;
     }
+    public int getAmount(){return this.Amount;}
+    public String getTransferCategory(){return this.TrasferCategory;}
  }

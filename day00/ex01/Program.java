@@ -3,32 +3,27 @@ import java.util.Scanner;
 public class Program{
     static void isprime(int a)
     {
-        if (a <= 1)
-            System.exit(-1);
-        int e = a/2;
-        int nee = 0;
-        for (int i = 2; i <= Math.sqrt(a) + 1; i++)
-        {
-            nee++;
-            if (a % i == 0)
-            {
-                System.out.println("true "+nee);
-                return;
+        int i = 2;
+        for (;i <= Math.sqrt(a);i++){
+            if (a % i == 0){
+                System.out.println("false " + (i - 1));
+                return ;
             }
         }
-        System.out.println("true "+nee);
+        System.out.println("true " + (i - 1));
+
     }
     public static void main(String args[])
     {
         Scanner sc = new Scanner(System.in);
-        try{
-            System.out.println("enter a number : ");
-            int a = sc.nextInt();
-            isprime(a);
+        System.out.print("-> ");
+        int number = sc.nextInt();
+        if (number <= 1){
+            System.err.println(" IllegalArgument");
+            System.exit(1);
         }
-        catch(Exception e){
-            System.out.println("Illegal Argument");
-            System.exit(-1);
-        }
+        isprime(number);
+        sc.close();
+        
     }
 }

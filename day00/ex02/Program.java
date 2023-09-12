@@ -3,11 +3,12 @@ import java.util.Scanner;
 public class Program{
     static int sumOfDigit(int number)
     {
-        String str = Integer.toString(number);
-        int a = 0;
-        for (int i = 0;i < str.length();i++)
-          a += Character.getNumericValue(str.charAt(i));
-        return (a);
+        int sum = 0;
+        while (number > 0){
+          sum += number % 10;
+          number /= 10;
+        }
+        return sum;
     }
     static boolean isprime(int a)
     {

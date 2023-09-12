@@ -9,41 +9,33 @@ public class Program{
           a += Character.getNumericValue(str.charAt(i));
         return (a);
     }
-    static boolean isprime(int e)
+    static boolean isprime(int a)
     {
-        int a = sumOfDigit(e);
-        if (a <= 1)
-            System.exit(-1);
-        int nee = 0;
-        for (int i = 2; i <= Math.sqrt(a) + 1; i++)
-        {
-            nee++;
+        int i = 2;
+        for (;i <= Math.sqrt(a);i++){
             if (a % i == 0)
                 return false;
         }
         return true;
+
     }
     public static void main(String args[])
     {
         int count = 0;
         Scanner sc = new Scanner(System.in);
-        try
+        System.out.print("-> ");
+        while (sc.hasNextInt())
         {
-            System.out.print("->");
-            while (sc.hasNextInt())
-            {
-                int a = sc.nextInt();
-                if (isprime(a) == true)
-                    count++;
-                if (a == 42)
-                    break;
-                else
-                    System.out.print("->");
-            }
-        }catch(Exception e)
-        {
-            System.out.println("invalid argument");
+            int a = sc.nextInt();
+            if (a < 0)
+            System.err.println("Invalid arguments.");
+            if (isprime(sumOfDigit(a)) == true)
+                count++;
+            if (a == 42)
+                break;
+            else
+                System.out.print("-> ");
         }
-        System.out.println("Count of coffee-request -" + count);
+        System.out.println("Count of coffee-request : " + count);
     }
 }
